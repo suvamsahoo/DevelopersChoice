@@ -2,6 +2,7 @@ import express from 'express';
 const app = express();
 import data from './data.js'
 
+//To get products data-:
 app.get('/api/products', (req, res) => {
     res.send(data.products)
 })
