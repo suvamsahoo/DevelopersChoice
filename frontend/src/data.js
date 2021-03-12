@@ -7,7 +7,7 @@ const data = {
             image:"/images/react.jpg",
             price:499,
             brand: "React",
-            rating:4.9,
+            rating:4.5,
             numReviews:10,
             description:"Classic, lightweight jersey fabric comprising 100% cotton with ribbed knit crew neck."
         },
@@ -18,7 +18,7 @@ const data = {
             image:"/images/python.jpg",
             price:499,
             brand: "Python",
-            rating:4.5,
+            rating:4,
             numReviews:19,
             description:"Classic, lightweight jersey fabric comprising 100% cotton with ribbed knit crew neck."
         },
@@ -40,7 +40,7 @@ const data = {
             image:"/images/aws.jpg",
             price:399,
             brand: "Amazon",
-            rating:4.6,
+            rating:3.9,
             numReviews:87,
             description:"Classic, lightweight jersey fabric comprising 100% cotton with ribbed knit crew neck."
         },
@@ -51,7 +51,7 @@ const data = {
             image:"/images/microsoft.jpg",
             price:699,
             brand: "Microsoft",
-            rating:4.9,
+            rating:1,
             numReviews:24,
             description:"Classic, lightweight jersey fabric comprising 100% cotton with ribbed knit crew neck."
         },
