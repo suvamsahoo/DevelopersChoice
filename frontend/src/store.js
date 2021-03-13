@@ -1,12 +1,13 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
-import { productListReducer } from "./reducers/productReducers";
+import { productDetailsReducer, productListReducer } from "./reducers/productReducers";
 
 const initialState = {};
 
 //combineReducer() function takes multiple reducer functions as an argument and turns down into a single reducer function.
 const reducer =  combineReducers({
     productList: productListReducer,
+    productDetails: productDetailsReducer,
 })
 
 //For connect between redux store & Redux DevTools Extension-: 
