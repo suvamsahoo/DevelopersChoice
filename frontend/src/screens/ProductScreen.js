@@ -11,7 +11,7 @@ const ProductScreen = (props) => {
   );
 
   const addToCartHandler = () => {
-    props.history.push(`/cart/${product._id}?qty=${qty}`)
+    props.history.push(`/cart/${product._id}?qty=${qty}`)//triger this route
   }
 
   if (!product) {
