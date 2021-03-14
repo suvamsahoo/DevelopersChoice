@@ -1,12 +1,16 @@
 import express from "express";
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
 mongoose.connect(
-  'mongodb://localhost/DevelopersChoice',{
+  process.env.MONGODB_URL || "mongodb://localhost/DevelopersChoice",
+  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-  });
+  }
+);
 
 import data from "./data.js";
 import userRouter from "./routers/userRouters.js";
@@ -26,7 +30,7 @@ app.get("/api/products", (req, res) => {
   res.send(data.products);
 });
 
-app.use('/api/users', userRouter);
+app.use("/api/users", userRouter);
 
 app.get("/", (req, res) => {
   res.send("server is ready");
