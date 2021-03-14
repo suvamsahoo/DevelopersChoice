@@ -11,6 +11,7 @@ mongoose.connect(
     useCreateIndex: true,
   }
 );
+
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 

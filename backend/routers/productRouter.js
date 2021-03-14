@@ -24,6 +24,7 @@ productRouter.get(
     res.send({ createdProducts });
   })
 );
+//---------------------------------------------------------------------------------------------
 
 /* http://localhost:5000/api/products/:id in this API we are getting product data from mongoDB */
 productRouter.get(
