@@ -10,7 +10,7 @@ export default function SigninScreen() {
     e.preventDefault();
     // TODO: sign in action
   };
-  
+
   return (
     <div>
       <form className="form" onSubmit={submitHandler}>
@@ -19,7 +19,7 @@ export default function SigninScreen() {
         </div>
         <div>
           <label htmlFor="email">Email address</label>
-          <input
+          <input 
             type="email"
             id="email"
             placeholder="Enter email"

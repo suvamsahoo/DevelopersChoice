@@ -88,9 +88,6 @@ button {
   background-color: #f8f8f8;
   cursor: pointer;
 }
-input:hover,
-select:hover,
-textarea:hover,
 button:hover {
   border: 0.1rem #404040 solid;
 }
@@ -190,3 +187,19 @@ img.medium {
 .margin-5{
   margin: 5px;
 }
+
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+ 
