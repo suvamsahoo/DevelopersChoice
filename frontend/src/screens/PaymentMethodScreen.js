@@ -10,7 +10,7 @@ export default function PaymentMethodScreen(props) {
     //redirect to shipping-:
     props.history.push("/shipping");
   }
-  
+
   const [paymentMethod, setPaymentMethod] = useState("PayPal");
 
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ export default function PaymentMethodScreen(props) {
   };
 
   return (
-    <div>
+    <div style={{ border: "1px solid black", padding: "20px" }}>
       <CheckoutSteps step1 step2 step3></CheckoutSteps>
       <form className="form" onSubmit={submitHandler}>
         <div>
