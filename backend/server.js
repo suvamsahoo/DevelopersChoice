@@ -19,6 +19,7 @@ import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 import orderRouter from "./routers/orderRouter.js";
 
+//imported APIs to response this path-:
 app.use("/api/users", userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
