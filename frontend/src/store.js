@@ -1,34 +1,43 @@
 import { applyMiddleware, combineReducers, compose, createStore } from "redux";
 import thunk from "redux-thunk";
 import { cartReducer } from "./reducers/cartReducers";
-import { productDetailsReducer, productListReducer } from "./reducers/productReducers";
-import { userRegisterReducer, userSigninReducer } from "./reducers/userReducers";
+import {
+  productDetailsReducer,
+  productListReducer,
+} from "./reducers/productReducers";
+import {
+  userRegisterReducer,
+  userSigninReducer,
+} from "./reducers/userReducers";
 
 const initialState = {
   //If we refresh the page data will get from localStorage-:
   userSignin: {
-    userInfo: localStorage.getItem('userInfo')
-      ? JSON.parse(localStorage.getItem('userInfo'))
+    userInfo: localStorage.getItem("userInfo")
+      ? JSON.parse(localStorage.getItem("userInfo"))
       : null,
   },
 
   cart: {
-    cartItems: localStorage.getItem('cartItems')
-      ? JSON.parse(localStorage.getItem('cartItems'))
+    cartItems: localStorage.getItem("cartItems")
+      ? JSON.parse(localStorage.getItem("cartItems"))
       : [],
+    shippingAddress: localStorage.getItem("shippingAddress")
+      ? JSON.parse(localStorage.getItem("shippingAddress"))
+      : {},
   },
 };
 
 //combineReducer() function takes multiple reducer functions as an argument and turns down into a single reducer function.
-const reducer =  combineReducers({
-    productList: productListReducer,
-    productDetails: productDetailsReducer,
-    cart: cartReducer,
-    userSignin: userSigninReducer,
-    userRegister: userRegisterReducer,
-})
+const reducer = combineReducers({
+  productList: productListReducer,
+  productDetails: productDetailsReducer,
+  cart: cartReducer,
+  userSignin: userSigninReducer,
+  userRegister: userRegisterReducer,
+});
 
-//For connect between redux store & Redux DevTools Extension-: 
+//For connect between redux store & Redux DevTools Extension-:
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //create a redux store, we need two things initial state & reducer.
@@ -49,4 +58,3 @@ export default store;
 /*
  redux-thunk-: By the help of redux-thunk we can make send AJAX request in our redux actions.
 */
-
